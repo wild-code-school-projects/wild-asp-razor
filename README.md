@@ -20,3 +20,5 @@ Create a page to display a list of expenses in a user-friendly table format.
 - Ensure the table layout enhances readability for users.
 - Implement responsive design for optimal viewing on various devices.
 - Validate input data to maintain data integrity and prevent errors.
+
+![image](https://image.noelshack.com/fichiers/2024/21/2/1716306639-screenshot-2024-05-21-175026.png)
