@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Expenditure>
+
+<h1>Liste des produits acheter : </h1>
+<div class="container">
+    <div class="row d-flex flex-wrap">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text pb-0 mb-0"><strong>Prix :</strong> @item.price€</p>
+                        <p class="card-text"><strong>Date :</strong> @item.Date.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("fr-FR"))</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @{
+        decimal total = Model.Sum(x => x.price);
+    }
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                Total des prix : @total€
+            </div>
+        </div>
+    </div>
+</div>
